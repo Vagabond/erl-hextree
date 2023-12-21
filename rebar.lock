@@ -1,1 +1,12 @@
-[].
+{"1.2.0",
+[{<<"h3">>,
+  {git,"https://github.com/helium/erlang-h3.git",
+       {ref,"90e1b6ebf93f88702ce8d24d9142833a8401e3ab"}},
+  0},
+ {<<"thoas">>,{pkg,<<"thoas">>,<<"1.2.0">>},0}]}.
+[
+{pkg_hash,[
+ {<<"thoas">>, <<"73B0546BAFF5008E6ED209558FD7B0606B035D96F9F3DE24EF42879100E094D4">>}]},
+{pkg_hash_ext,[
+ {<<"thoas">>, <<"540C8CB7D9257F2AD0A14145DC23560F91ACDCA995F0CCBA779EB33AF5D859D1">>}]}
+].
