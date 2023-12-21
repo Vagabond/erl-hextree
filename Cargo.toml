@@ -1,0 +1,15 @@
+[package]
+name = "hextree"
+build = "native/build.rs"
+edition = "2021"
+version = "0.1.0"
+
+[lib]
+crate-type = ["dylib"]
+name = "hextree_nif"
+path = "native/lib.rs"
+
+[dependencies]
+hextree = { git= "https://github.com/JayKickliter/HexTree" }
+rustler = "0.25.0"
+rustler_stored_term = "0.1.0"
