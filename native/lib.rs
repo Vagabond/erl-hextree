@@ -54,7 +54,7 @@ pub fn load(env: Env, _load_info: Term) -> bool {
 }
 
 rustler::init!(
-    "hexmap_nif",
+    "hextree_nif",
     [
     hexset_new,
     hexset_contains,
