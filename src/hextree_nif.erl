@@ -4,24 +4,37 @@
     hextree_new/1,
     hexset_new/1,
     hextree_contains/2,
-    hexset_contains/2
+    hexset_contains/2,
+    hexset_to_disktree/2,
+    disktree_open/1,
+    disktree_contains/2
 ]).
 
 -on_load(init/0).
 
 -define(NOT_LOADED, not_loaded(?LINE)).
 
-hextree_new(Map) ->
+hextree_new(_Map) ->
     ?NOT_LOADED.
 
-hexset_new(List) ->
+hexset_new(_List) ->
     ?NOT_LOADED.
 
-hextree_contains(Tree, Index) ->
+hextree_contains(_Tree, _Index) ->
     ?NOT_LOADED.
 
-hexset_contains(Set, Index) ->
+hexset_contains(_Set, _Index) ->
     ?NOT_LOADED.
+
+hexset_to_disktree(_Set, _Filename) ->
+    ?NOT_LOADED.
+
+disktree_open(_Filename) ->
+    ?NOT_LOADED.
+
+disktree_contains(_DT, _Index) ->
+    ?NOT_LOADED.
+
 
 
 

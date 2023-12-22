@@ -1,6 +1,6 @@
 -module(hexset).
 
--export([new/1, contains/2, from_geojson/2]).
+-export([new/1, contains/2, from_geojson/2, to_disktree/2]).
 
 new(List) ->
     hextree_nif:hexset_new(List).
@@ -16,6 +16,10 @@ from_geojson(File, Res) ->
     Hexes = lists:map(fun(Feature) ->
                         Geo = maps:get(<<"geometry">>, Feature),
                         Coords = maps:get(<<"coordinates">>, Geo),
-                        h3:polyfill(lists:map(fun(C) -> lists:map(fun([A, B]) -> {B, A} end, C) end, Coords), Res)
+                        h3:compact(h3:polyfill(lists:map(fun(C) -> lists:map(fun([A, B]) -> {B, A} end, C) end, Coords), Res))
                 end, maps:get(<<"features">>, JSON)),
+
     new(lists:flatten(Hexes)).
+
+to_disktree(Set, Filename) ->
+    hextree_nif:hexset_to_disktree(Set, Filename).

@@ -10,6 +10,7 @@ name = "hextree_nif"
 path = "native/lib.rs"
 
 [dependencies]
-hextree = { git= "https://github.com/JayKickliter/HexTree" }
+bincode = "1.3.3"
+hextree = { git= "https://github.com/JayKickliter/HexTree", branch="jsk/add-disk-repr" }
 rustler = "0.25.0"
 rustler_stored_term = "0.1.0"
