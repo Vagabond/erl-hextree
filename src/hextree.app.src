@@ -6,4 +6,5 @@
               {env,[]},
               {modules,[]},
               {licenses,["Apache 2.0"]},
-              {links,[]}]}.
+              {include_paths, ["native"]},
+              {links, [{"Github", "https://github.com/Vagabond/erl-hextree"}]}]}.
