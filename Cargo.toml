@@ -11,5 +11,5 @@ path = "native/lib.rs"
 
 [dependencies]
 bincode = "1.3.3"
-hextree = { git= "https://github.com/JayKickliter/HexTree", branch="jsk/add-disk-repr" }
+hextree = { git= "https://github.com/JayKickliter/HexTree", branch="main", features=["disktree"] }
 rustler = "0.30.0"

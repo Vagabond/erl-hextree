@@ -1,3 +1,4 @@
+use hextree::memmap::Mmap;
 use hextree::{Cell, HexTreeSet};
 use rustler::{
     types::atom::{false_, ok, true_},
@@ -36,8 +37,7 @@ fn hexset_to_disktree(set: ResourceArc<HexSet>, filename: String) -> Atom {
 
 #[rustler::nif]
 fn disktree_open<'a>(env: Env<'a>, filename: String) -> Term<'a> {
-    let input = File::open(filename).unwrap();
-    let dt = hextree::disktree::DiskTree::from_reader(input).unwrap();
+    let dt = hextree::disktree::DiskTreeMap::open(filename).unwrap();
     (ok(), ResourceArc::new(DiskTree(dt.into()))).encode(env)
 }
 
@@ -60,10 +60,10 @@ impl std::ops::Deref for HexSet {
     }
 }
 
-struct DiskTree(Mutex<hextree::disktree::DiskTree<File>>);
+struct DiskTree(Mutex<hextree::disktree::DiskTreeMap<Mmap>>);
 
 impl std::ops::Deref for DiskTree {
-    type Target = Mutex<hextree::disktree::DiskTree<File>>;
+    type Target = Mutex<hextree::disktree::DiskTreeMap<Mmap>>;
     fn deref(&self) -> &Self::Target {
         &self.0
     }
