@@ -6,5 +6,5 @@
               {env,[]},
               {modules,[]},
               {licenses,["Apache 2.0"]},
-              {include_paths,["native","Cargo.toml","Cargo.lock"]},
+              {include_paths,["native","Cargo.toml","Cargo.lock", ".cargo/config.toml"]},
               {links,[{"Github","https://github.com/Vagabond/erl-hextree"}]}]}.
