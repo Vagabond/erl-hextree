@@ -1,10 +1,11 @@
 {application,hextree,
              [{description,"An Erlang wrapper for h3 hextrees/hexsets."},
-              {vsn,"0.1.4"},
+              {vsn,"0.1.5"},
               {registered,[]},
               {applications,[kernel,stdlib]},
               {env,[]},
               {modules,[]},
               {licenses,["Apache 2.0"]},
-              {include_paths,["native","Cargo.toml","Cargo.lock", ".cargo/config.toml"]},
+              {include_paths,["native","Cargo.toml","Cargo.lock",
+                              ".cargo/config.toml"]},
               {links,[{"Github","https://github.com/Vagabond/erl-hextree"}]}]}.
