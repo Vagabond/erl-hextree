@@ -44,7 +44,7 @@ dependencies = [
 [[package]]
 name = "hextree"
 version = "0.3.1"
-source = "git+https://github.com/JayKickliter/HexTree?branch=jsk/add-disk-repr#42b3a1eaf9658da15bd71a08bf784b5f6685174a"
+source = "git+https://github.com/JayKickliter/HexTree?branch=main#917b8193acc01a36c7209d40fc20d5d1f244118d"
 dependencies = [
  "byteorder",
  "memmap",
