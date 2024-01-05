@@ -1,6 +1,6 @@
 {application,hextree,
              [{description,"An Erlang wrapper for h3 hextrees/hexsets."},
-              {vsn,"0.1.2"},
+              {vsn,"0.1.3"},
               {registered,[]},
               {applications,[kernel,stdlib]},
               {env,[]},
